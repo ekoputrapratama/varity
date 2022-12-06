@@ -15,10 +15,10 @@ Varity is an application to manage your device volume and brightness for each di
 ## Note 
 This app probably won't work on multi window mode, i never tried this app in androidx86 or similar os, so i would appreciate it if you can give me a feedback about it.
 
-For now this app was only available on Android, but i may consider to add another platform except for web. But it would be a different kind of app, because this app only support for a fullscreen app and probably not working in multi window.
+For now this app is only available on Android, but I may consider adding another platform except for the web. But it would be a different kind of app because this app only support a fullscreen app and probably not working in multi window.
 
 ## Notice
-This app has been released in google play store before but lately play console just want to make it hard for me to update my app in there so i decide to move it somewhere else, if you have any suggestion you can contact me.
+This app has been released in google play store before but lately play console just want to make it hard for me to update my app in there so i decide to move it somewhere else, if you have any suggestion about where i should publish my app you can contact me.
 
 Note that never ever in my life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user.
 
