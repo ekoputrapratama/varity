@@ -8,9 +8,9 @@ Varity is an application to manage your device volume and brightness for each di
 - Accessibility Service (used to watch your active app and change volume/brightness based on what app you open.)
 
 ## Features
-• It works on rooted/non-rooted device
-• Save brightness/volume state for each different app
-• Show notification to configure brightness/volume when you install new app
+- It works on rooted/non-rooted device
+- Save brightness/volume state for each different app
+- Show notification to configure brightness/volume when you install new app
 
 ## Note 
 This app probably won't work on multi window mode, i never tried this app in androidx86 or similar os, so i would appreciate it if you can give me a feedback about it.
