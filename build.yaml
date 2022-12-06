@@ -1,0 +1,45 @@
+# Read about `build.yaml` at https://pub.dartlang.org/packages/build_config
+# targets:
+#   $default:
+#     builders:
+#       varity:
+#         generate_for:
+#           - lib/AppDatabase.dart
+targets:
+  $default:
+    builders:
+      sonicdb|part:
+        generate_for:
+          - lib/**/*
+          - lib/*
+      # sonicdb|entity:
+      #   generate_for:
+      #     - lib/model/*
+      # sonicdb|collection:
+      #   generate_for:
+      #     - lib/collection/*
+      # sonicdb|database:
+      #   generate_for:
+      #     - lib/AppDatabase.dart
+      
+# builders:
+#   varity:
+#     target: ":varity"
+#     import: "package:varity/generator/database_generator.dart"
+#     builder_factories: ["sonicdbBuilder"]
+#     build_extensions: { ".dart": [".sonicdb.g.part"] }
+#     auto_apply: dependents
+#     build_to: source
+#     applies_builders: ["source_gen|combining_builder"]
+  # _test_builder:
+  #   import: 'tool/test_builder.dart'
+  #   builder_factories: ['testBuilder']
+  #   build_extensions:
+  #     .dart:
+  #     - .factories.dart
+  #     - .g_any_map.dart
+  #     - .g_any_map__checked.dart
+  #     - .g_exclude_null.dart
+  #     - .g_explicit_to_json.dart
+  #   build_to: source
+  #   runs_before: ["json_serializable"]

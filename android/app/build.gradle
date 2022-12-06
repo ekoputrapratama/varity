@@ -1,0 +1,118 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+  throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+  flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+  flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+  compileSdkVersion 33
+  ndkVersion "22.1.7171670"
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+  
+  signingConfigs {
+    release {
+      storeFile file("D:\\Projects\\Flutter\\varity-nullsafety\\mixaline.jks")
+      storePassword 'mixaline'
+      keyAlias 'mixaline'
+      keyPassword 'mixaline'
+    }
+    debug {
+      storeFile file("D:\\Projects\\Flutter\\varity-nullsafety\\mixaline.jks")
+      storePassword 'mixaline'
+      keyAlias 'mixaline'
+      keyPassword 'mixaline'
+    }
+  }
+  splits {
+    abi {
+      enable false
+      reset()
+      include 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+      universalApk true
+    }
+  }
+  defaultConfig {
+    // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+    applicationId "com.mixaline.varity"
+    minSdkVersion 22
+    targetSdkVersion 33
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+    // ndk {
+    //   abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+    // }
+  }
+
+  buildTypes {
+    release {
+      // TODO: Add your own signing config for the release build.
+      // Signing with the debug keys for now, so `flutter run --release` works.
+      signingConfig signingConfigs.release
+    }
+    debug {
+      signingConfig signingConfigs.debug
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  namespace 'com.mixaline.varity'
+}
+
+flutter {
+  source '../..'
+}
+
+dependencies {
+  kapt "androidx.room:room-compiler:2.4.3"
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'androidx.core:core-ktx:1.9.0'
+  implementation "androidx.appcompat:appcompat:1.5.1"
+  implementation 'androidx.preference:preference-ktx:1.2.0'
+  implementation 'androidx.room:room-runtime:2.4.3'
+  implementation 'androidx.room:room-ktx:2.4.3'
+  implementation "com.android.billingclient:billing:$billing_version"
+  implementation 'com.ironsource.sdk:mediationsdk:7.2.5'
+  implementation 'com.google.android.gms:play-services-appset:16.0.2'
+  implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+  implementation 'com.google.android.gms:play-services-basement:18.1.0'
+  
+  api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+  // ... other project dependencies
+  
+  // implementation "com.android.billingclient:billing-ktx:$billing_version"
+//  implementation(name:'unity-ads', ext:'aar')
+}
+

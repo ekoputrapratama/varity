@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="810"
+   height="810"
+   viewBox="0 0 214.31251 214.31249"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="varity-new.svg"
+   inkscape:export-filename="C:\Users\M Sayuti\Pictures\varity.png"
+   inkscape:export-xdpi="96.029549"
+   inkscape:export-ydpi="96.029549">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-54.292303"
+     inkscape:cy="372.49354"
+     inkscape:document-units="mm"
+     inkscape:current-layer="text12"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid11"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-86.94101,-69.249657)">
+    <g
+       aria-label="V"
+       id="text12"
+       style="font-size:50.8px;line-height:1.25;font-family:'Hi Jack';-inkscape-font-specification:'Hi Jack';stroke-width:0.264583">
+      <path
+         d="m 227.17016,216.92881 -13.22912,-31.74999 -15.87503,37.04166 h 60.85417 L 213.94104,126.97049 154.67434,243.91631 86.94101,108.44966 h 33.86682 l 33.86651,65.90303 18.79544,-36.61285 14.0129,-28.80268 h 52.91666 l 60.85417,135.42499 H 161.02434 l 52.9167,-109.45416 37.04163,82.02082 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:'Deadly Advance';-inkscape-font-specification:'Deadly Advance';fill:#008080;stroke-width:0.839906"
+         id="path14"
+         sodipodi:nodetypes="ccccccccccccccccc" />
+    </g>
+  </g>
+</svg>

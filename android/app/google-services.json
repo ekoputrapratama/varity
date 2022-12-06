@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1017006698134",
+    "project_id": "mixaline",
+    "storage_bucket": "mixaline.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017006698134:android:c364978f45810383279cb7",
+        "android_client_info": {
+          "package_name": "com.mixaline.varity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017006698134-oh23h4t4426d6h3ib46hsp1aba6bnnos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAur_AKSnh8Kohe3U4rQ5pFSGB4TxM3paM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017006698134-oh23h4t4426d6h3ib46hsp1aba6bnnos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017006698134:android:63fefddec4d99a64279cb7",
+        "android_client_info": {
+          "package_name": "com.mixaline.volumemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017006698134-oh23h4t4426d6h3ib46hsp1aba6bnnos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAur_AKSnh8Kohe3U4rQ5pFSGB4TxM3paM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017006698134-oh23h4t4426d6h3ib46hsp1aba6bnnos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
