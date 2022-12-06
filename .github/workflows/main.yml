@@ -31,6 +31,11 @@ jobs:
       #   with:
       #     api-level: 33
       #     script: flutter test integration_test
+      - name: Build APK
+        run: flutter build apk
+      
+      - name: Build Appbundle
+        run: flutter build appbundle
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
