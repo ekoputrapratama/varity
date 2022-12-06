@@ -20,7 +20,7 @@ For now this app is only available on Android, but I may consider adding another
 ## Notice
 This app has been released in google play store before but lately play console just want to make it hard for me to update my app in there so i decide to move it somewhere else, if you have any suggestion about where i should publish my app you can contact me.
 
-Note that never ever in my life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user.
+Note that never ever in my whole life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user.
 
 In Varity i didn't receive any personal data from you, the data that i use in this app will only stay in your phone so you can just clear the app data from your settings app, but i do collect some info from your phone but it was only for detecting crash/issue in Varity.
 
@@ -28,7 +28,7 @@ In Varity i didn't receive any personal data from you, the data that i use in th
 - [ ] Add support to differentiate volume when connected to hadphone/handsfree
 - [ ] Add support to change ring volume
 - [ ] Add support to make phone silent on holiday by checking calender schedule
-- [ ] Add support to make  phone silent on weekend
+- [ ] Add support to make phone silent on weekend
 - [x] Add default volume/brightness configuration in settings
 - [ ] Add support to detect a player when it's in picture-in-picture mode
 - [ ] Add some tests
