@@ -10,11 +10,9 @@ import 'package:android_native/media/AudioManager.dart';
 import 'package:android_native/os/Build.dart';
 
 import 'package:android_native/content/Intent.dart' as Native;
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
@@ -65,13 +63,15 @@ class VarityApp extends Application {
   //   // Throw deep link URI into the BloC's stream
   //   if (uri != null) stateSink.add(uri);
   // }
-  double? getMaxBrightness() {
+  double getMaxBrightness() {
     String manufacturer = Build.MANUFACTURER;
     String model = Build.MODEL;
+    developer.log("MANUFACTURER ${Build.MANUFACTURER}");
+    developer.log("MODEL ${Build.MODEL}");
     if (maxBrightnessMap.keys.contains("$manufacturer $model")) {
-      return maxBrightnessMap["$manufacturer $model"];
+      return maxBrightnessMap["$manufacturer $model"]!;
     }
-    return maxBrightnessMap['default'];
+    return maxBrightnessMap['default']!;
   }
 
   Future<void> _initialization() async {
@@ -79,10 +79,8 @@ class VarityApp extends Application {
 
     await super.init();
 
-    developer.log("MANUFACTURER ${Build.MANUFACTURER}");
-    developer.log("MODEL ${Build.MODEL}");
     var brightness = getMaxBrightness();
-    if (brightness != null && brightness > 0) {
+    if (brightness > 0) {
       controller.maxBrightness = brightness;
     }
 
@@ -110,16 +108,6 @@ class VarityApp extends Application {
     //   onFailed: (adUnitId, error, message) => print(
     //       'UnityMediation : Rewarded Ad Load Failed $adUnitId: $error $message'),
     // );
-
-    await Firebase.initializeApp().then((value) async {
-      if (kDebugMode) {
-        await FirebaseCrashlytics.instance
-            .setCrashlyticsCollectionEnabled(false);
-      } else {
-        await FirebaseCrashlytics.instance
-            .setCrashlyticsCollectionEnabled(true);
-      }
-    });
 
     try {
       await controller.initPlatformState(getApplicationContext());

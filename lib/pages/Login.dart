@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:firebase_auth/firebase_auth.dart';
-
 bool _signUpActive = false;
 bool _signInActive = true;
 
@@ -427,12 +425,12 @@ class _LoginPageState extends State<LoginPage> {
   Future<bool> signUpWithEmailAndPassword(
       TextEditingController email, TextEditingController password) async {
     try {
-      UserCredential result = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(
-              email: email.text.trim().toLowerCase(), password: password.text);
-      if (result.user != null) {
-        print('Signed up: ${result.user!.uid}');
-      }
+      // UserCredential result = await FirebaseAuth.instance
+      //     .createUserWithEmailAndPassword(
+      //         email: email.text.trim().toLowerCase(), password: password.text);
+      // if (result.user != null) {
+      //   print('Signed up: ${result.user!.uid}');
+      // }
 
       return true;
     } catch (e) {
@@ -444,12 +442,12 @@ class _LoginPageState extends State<LoginPage> {
   Future<bool> signInWithEmail(context, TextEditingController email,
       TextEditingController password) async {
     try {
-      UserCredential result = await FirebaseAuth.instance
-          .signInWithEmailAndPassword(
-              email: email.text.trim().toLowerCase(), password: password.text);
-      if (result.user != null) {
-        print('Signed in: ${result.user!.uid}');
-      }
+      // UserCredential result = await FirebaseAuth.instance
+      //     .signInWithEmailAndPassword(
+      //         email: email.text.trim().toLowerCase(), password: password.text);
+      // if (result.user != null) {
+      //   print('Signed in: ${result.user!.uid}');
+      // }
       return true;
     } catch (e) {
       print('Error: $e');

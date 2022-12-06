@@ -5,7 +5,6 @@ import 'dart:developer';
 import 'package:android_native/app/Activity.dart';
 import 'package:android_native/content/Intent.dart' as Native;
 import 'package:android_native/provider/Settings.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -19,6 +18,7 @@ import 'package:varity/utils/BuildUtils.dart';
 import 'package:varity/utils/PreferenceUtils.dart';
 import 'package:varity/utils/ServiceUtils.dart';
 import 'package:varity/widgets/AppItemView.dart';
+import 'package:sentry/sentry.dart';
 
 import '../utils/SettingsUtils.dart';
 
@@ -196,6 +196,7 @@ class _HomePageState extends ActivityState<HomePage>
     super.didChangeAppLifecycleState(state);
     switch (state) {
       case AppLifecycleState.detached:
+        break;
       case AppLifecycleState.resumed:
         // if (_apps.length < 1) _fetchApps();
         break;
