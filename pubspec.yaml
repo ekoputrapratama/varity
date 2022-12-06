@@ -18,15 +18,15 @@ homepage: https://github.com/ekoputrapratama/varity
 version: 1.0.9+4
 
 environment:
-  sdk: ">=2.12.0 <=3.3.9"
+  sdk: ">=2.12.0 <=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations: # Add this line
     sdk: flutter
-  android_native: ^0.0.3
-  sonicdb: ^0.0.2
+  android_native: ^0.0.4
+  sonicdb: ^0.0.3
   showcaseview: ^1.0.0
 
   firebase_core: ^2.2.0
