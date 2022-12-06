@@ -20,7 +20,9 @@ For now this app was only available on Android, but i may consider to add anothe
 ## Notice
 This app has been released in google play store before but lately play console just want to make it hard for me to update my app in there so i decide to move it somewhere else, if you have any suggestion you can contact me.
 
-Note that never ever in my life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user
+Note that never ever in my life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user.
+
+In Varity i didn't receive any personal data from you, the data that i use in this app will only stay in your phone so you can just clear the app data from your settings app, but i do collect some info from your phone but it was only for detecting crash/issue in Varity.
 
 ## TODO
 - [ ] Add support to differentiate volume when connected to hadphone/handsfree
