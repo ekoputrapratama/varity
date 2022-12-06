@@ -20,7 +20,7 @@ For now this app was only available on Android, but i may consider to add anothe
 ## Notice
 This app has been released in google play store before but lately play console just want to make it hard for me to update my app in there so i decide to move it somewhere else, if you have any suggestion you can contact me.
 
-Note that never ever in my life I do data mining and selling it to a third party. even though sometimes I collected your data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user
+Note that never ever in my life I do data mining and selling/sharing it to a third party. even though sometimes I collected your personal data like email, it was only so I can organize your other data in the database based on your email. From my point of view, email can act as your unique id because you can't make an email that is already being used by another user
 
 ## TODO
 - [ ] Add support to differentiate volume when connected to hadphone/handsfree
