@@ -2,9 +2,8 @@ name: Varity Workflow
 
 on: [push, workflow_dispatch]
 jobs:
-  build:
-    
-    runs-on: ubuntu-22.04
+  draft_release:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,13 +18,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
       
-      - name: Setup key.properties
-        run: cd android; cat key.properties; cd ..
-          # cd android;
-          # echo storeFile=\"$ANDROID_STORE_FILE\" > key.properties;
-          # echo storePassword=\"$ANDROID_STORE_PASSWORD\" > key.properties;
-          # echo keyAlias=\"$ANDROID_KEY_ALIAS\" > key.properties;
-          # echo keyPassword=\"$ANDROID_KEY_PASSWORD\" > key.properties;
 
       # let's exlude the tests right now, didn't have the time to make all this tests
       # - name: Run unit tests
@@ -57,23 +49,43 @@ jobs:
           ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
           ANDROID_STORE_FILE: ${{ secrets.ANDROID_STORE_FILE }}
         run: flutter build appbundle
+      
+      - name: "find env"
+        run: |
+          set | grep GITHUB_ | grep -v GITHUB_TOKEN
+          zip -r pkg.zip *.md
+          echo "$(openssl rand -hex 6)" > "random-name-$(openssl rand -hex 6).txt"
+          echo "$(openssl rand -hex 6)" > "random-name-$(openssl rand -hex 6).txt"
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}-prelease
+          release_name: Release ${{ github.ref }} (prelease)
+          draft: false
+          prerelease: true
 
       - name: Upload APK
         uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tags: false
-          draft: true
           overwrite: true
+          verbose: true
           file: build/app/outputs/apk/release/app-release.apk
+          release_id: ${{ steps.create_release.outputs.id }}
+          branches: "main;dev"
+          
 
       - name: Upload appbundle
         uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tags: false
-          draft: true
           overwrite: true
+          verbose: true
           file: build/app/outputs/bundle/release/app-release.aab
+          branches: "main;dev"
