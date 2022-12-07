@@ -2,7 +2,7 @@ name: Varity Workflow
 
 on: [push, workflow_dispatch]
 jobs:
-  draft_release:
+  prelease:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -75,16 +75,7 @@ jobs:
         with:
           overwrite: true
           verbose: true
-          file: build/app/outputs/apk/release/app-release.apk
+          file: build/app/outputs/apk/release/app-release.apk;build/app/outputs/bundle/release/app-release.aab
           release_id: ${{ steps.create_release.outputs.id }}
-          branches: "main;dev"
+          
 
-      - name: Upload appbundle
-        uses: xresloader/upload-to-github-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          overwrite: true
-          verbose: true
-          file: build/app/outputs/bundle/release/app-release.aab
-          branches: "main;dev"
