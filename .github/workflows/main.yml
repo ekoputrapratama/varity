@@ -29,6 +29,7 @@ jobs:
           echo storePassword=\"$ANDROID_STORE_PASSWORD\" > key.properties
           echo keyAlias=\"$ANDROID_KEY_ALIAS\" > key.properties
           echo keyPassword=\"$ANDROID_KEY_PASSWORD\" > key.properties
+          cat key.properties
 
       # let's exlude the tests right now, didn't have the time to make all this tests
       # - name: Run unit tests
