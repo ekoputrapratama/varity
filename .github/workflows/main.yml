@@ -3,11 +3,7 @@ name: Varity Workflow
 on: [push, workflow_dispatch]
 jobs:
   build:
-    env:
-      ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-      ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-      ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
-      ANDROID_STORE_FILE: ${{ secrets.ANDROID_STORE_FILE }}
+    
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
@@ -46,9 +42,19 @@ jobs:
       #     api-level: 33
       #     script: flutter test integration_test
       - name: Build APK
+        env:
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_STORE_FILE: ${{ secrets.ANDROID_STORE_FILE }}
         run: flutter build apk
       
       - name: Build Appbundle
+        env:
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_STORE_FILE: ${{ secrets.ANDROID_STORE_FILE }}
         run: flutter build appbundle
 
       - name: Upload APK
