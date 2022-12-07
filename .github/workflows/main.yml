@@ -78,7 +78,6 @@ jobs:
           file: build/app/outputs/apk/release/app-release.apk
           release_id: ${{ steps.create_release.outputs.id }}
           branches: "main;dev"
-          
 
       - name: Upload appbundle
         uses: xresloader/upload-to-github-release@v1
