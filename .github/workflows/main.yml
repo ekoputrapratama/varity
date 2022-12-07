@@ -20,7 +20,7 @@ jobs:
         run: flutter pub get
       
       - name: Setup key.properties
-        run: cd android; cat keystore.properties; cd ..
+        run: cd android; cat key.properties; cd ..
           # cd android;
           # echo storeFile=\"$ANDROID_STORE_FILE\" > key.properties;
           # echo storePassword=\"$ANDROID_STORE_PASSWORD\" > key.properties;
