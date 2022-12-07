@@ -59,13 +59,21 @@ jobs:
         run: flutter build appbundle
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: release-apk
-          path: build/app/outputs/apk/release/app-release.apk
+          tags: false
+          draft: true
+          overwrite: true
+          file: build/app/outputs/apk/release/app-release.apk
 
       - name: Upload appbundle
-        uses: actions/upload-artifact@v3
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: release-appbundle
-          path: build/app/outputs/bundle/release/app-release.aab
+          tags: false
+          draft: true
+          overwrite: true
+          file: build/app/outputs/bundle/release/app-release.aab
