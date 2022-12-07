@@ -19,7 +19,7 @@ jobs:
         run: flutter pub get
       
 
-      # let's exlude the tests right now, didn't have the time to make all this tests
+      # let's exlude the tests right now, don't have the time to make all these tests
       # - name: Run unit tests
       #   run: flutter test --coverage
 
