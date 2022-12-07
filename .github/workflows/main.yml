@@ -2,7 +2,7 @@ name: Varity Workflow
 
 on: [push, workflow_dispatch]
 jobs:
-  prelease:
+  prerelease:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
